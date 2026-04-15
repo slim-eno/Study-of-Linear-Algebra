@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性代数冒险 - Linear Algebra Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 开始界面 -->
+        <div id="start-screen" class="screen active">
+            <div class="start-content">
+                <h1 class="game-title">🎮 线性代数冒险</h1>
+                <p class="game-subtitle">Linear Algebra Adventure</p>
+                <div class="intro-text">
+                    <p>欢迎来到线性代数的世界！</p>
+                    <p>在这里，你将通过游戏闯关的方式，</p>
+                    <p>一步步掌握线性代数的核心概念。</p>
+                </div>
+                <button id="start-btn" class="btn-primary">开始冒险</button>
+            </div>
+        </div>
+
+        <!-- 关卡选择界面 -->
+        <div id="level-select-screen" class="screen">
+            <div class="level-header">
+                <h2>选择关卡</h2>
+                <div class="player-stats">
+                    <span class="stat-item">⭐ 经验: <span id="player-exp">0</span></span>
+                    <span class="stat-item">🏆 等级: <span id="player-level">1</span></span>
+                </div>
+            </div>
+            <div id="level-grid" class="level-grid">
+                <!-- 关卡将通过JavaScript动态生成 -->
+            </div>
+            <button id="back-to-start" class="btn-secondary">返回</button>
+        </div>
+
+        <!-- 游戏界面 -->
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="level-info">
+                    <span id="current-level-name">关卡 1</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <button id="exit-level" class="btn-small">退出</button>
+            </div>
+            
+            <div id="lesson-content" class="lesson-content">
+                <!-- 课程内容将通过JavaScript动态生成 -->
+            </div>
+
+            <div id="quiz-area" class="quiz-area">
+                <!-- 测验内容将通过JavaScript动态生成 -->
+            </div>
+
+            <div id="feedback" class="feedback">
+                <!-- 反馈信息 -->
+            </div>
+
+            <div class="game-controls">
+                <button id="prev-btn" class="btn-secondary" style="display: none;">上一步</button>
+                <button id="next-btn" class="btn-primary">继续</button>
+            </div>
+        </div>
+
+        <!-- 关卡完成界面 -->
+        <div id="level-complete-screen" class="screen">
+            <div class="complete-content">
+                <h2 class="complete-title">🎉 关卡完成！</h2>
+                <div class="rewards">
+                    <p>获得经验: <span id="exp-gained">+100</span></p>
+                    <p>新等级: <span id="new-level">1</span></p>
+                </div>
+                <div id="unlock-message" class="unlock-message">
+                    <!-- 解锁新关卡的消息 -->
+                </div>
+                <div class="complete-buttons">
+                    <button id="next-level-btn" class="btn-primary">下一关</button>
+                    <button id="back-to-levels" class="btn-secondary">返回关卡选择</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
