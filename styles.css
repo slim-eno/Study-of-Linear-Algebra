@@ -29,17 +29,22 @@ body {
     display: none;
     padding: 40px;
     min-height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .screen.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 开始界面 */
 #start-screen {
     text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -391,8 +396,6 @@ body {
 /* 关卡完成界面 */
 #level-complete-screen {
     text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
